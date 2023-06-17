@@ -35,8 +35,8 @@ class Image(models.Model):
     # переопределения метода save() для автоматичекого заполнения поля slug
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(unidecode(self.title)) # заменить на AutoSlugField
-        super().save(*args, **kwargs)
+6
+super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('images:detail', args=[self.id, self.slug])
