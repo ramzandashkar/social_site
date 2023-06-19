@@ -8,7 +8,7 @@ from unidecode import unidecode
 class Image(models.Model):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        related_name='image_created',
+        related_name='images_created',
         on_delete=models.CASCADE,
     )
     title = models.CharField(max_length=200)
