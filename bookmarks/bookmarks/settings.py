@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'django_extensions',
-    'images.apps.ImagesConfig',
     'easy_thumbnails',
+    'images.apps.ImagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -167,3 +167,5 @@ SOCIAL_AUTH_PIPELINE = [
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda u: reverse_lazy('user_detail', args=[u.username])
 }
+
+# THUMBNAIL_DEBUG = True
